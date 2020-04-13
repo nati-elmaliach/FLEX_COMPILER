@@ -1,0 +1,14 @@
+if 8>8 return 0
+if 8>=8 return 1
+if 8<=8 return 1
+if 8==8 return 1
+if 5!=3 return 10
+8+8
+8*8
+int
+float
+34.86e-3
+void return int
+
+
+

@@ -1,0 +1,42 @@
+Line 0: found token of type TOKEN_KEYWORD_IF , lexeme if
+ Line 0: found token of type INT_NUM , lexeme 8
+Line 0: found token of type TOKEN_COMPARISION_GE , lexeme >
+Line 0: found token of type INT_NUM , lexeme 8
+ Line 0: found token of type TOKEN_KEYWORD_RETURN , lexeme return
+ 0Line 1: found token of type TOKEN_KEYWORD_IF , lexeme if
+ Line 1: found token of type INT_NUM , lexeme 8
+Line 1: found token of type TOKEN_COMPARISION_GE_EQ , lexeme >=
+Line 1: found token of type INT_NUM , lexeme 8
+ Line 1: found token of type TOKEN_KEYWORD_RETURN , lexeme return
+ Line 1: found token of type INT_NUM , lexeme 1
+Line 2: found token of type TOKEN_KEYWORD_IF , lexeme if
+ Line 2: found token of type INT_NUM , lexeme 8
+Line 2: found token of type TOKEN_COMPARISION_LESS_EQUAL , lexeme <=
+Line 2: found token of type INT_NUM , lexeme 8
+ Line 2: found token of type TOKEN_KEYWORD_RETURN , lexeme return
+ Line 2: found token of type INT_NUM , lexeme 1
+Line 3: found token of type TOKEN_KEYWORD_IF , lexeme if
+ Line 3: found token of type INT_NUM , lexeme 8
+Line 3: found token of type TOKEN_COMPARISION_EQUAL , lexeme ==
+Line 3: found token of type INT_NUM , lexeme 8
+ Line 3: found token of type TOKEN_KEYWORD_RETURN , lexeme return
+ Line 3: found token of type INT_NUM , lexeme 1
+Line 4: found token of type TOKEN_KEYWORD_IF , lexeme if
+ Line 4: found token of type INT_NUM , lexeme 5
+Line 4: found token of type TOKEN_COMPARISION_NOT_EQUAL , lexeme !=
+Line 4: found token of type INT_NUM , lexeme 3
+ Line 4: found token of type TOKEN_KEYWORD_RETURN , lexeme return
+ Line 4: found token of type INT_NUM , lexeme 10
+Line 5: found token of type INT_NUM , lexeme 8
+Line 5: found token of type TOKEN_OPERATOR_ADDITION , lexeme +
+Line 5: found token of type INT_NUM , lexeme 8
+Line 6: found token of type INT_NUM , lexeme 8
+Line 6: found token of type TOKEN_OPERATOR_MULTIPLIATION , lexeme *
+Line 6: found token of type INT_NUM , lexeme 8
+Line 7: found token of type TOKEN_KEYWORD_INT , lexeme int
+Line 8: found token of type TOKEN_KEYWORD_FLOAT , lexeme float
+Line 9: found token of type FLOAT_NUM , lexeme 34.86e-3
+Line 10: found token of type TOKEN_KEYWORD_VOID , lexeme void
+ Line 10: found token of type TOKEN_KEYWORD_RETURN , lexeme return
+ Line 10: found token of type TOKEN_KEYWORD_INT , lexeme int
+Line 14: found token of type EOF , lexeme 
