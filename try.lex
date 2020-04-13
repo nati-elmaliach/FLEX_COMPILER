@@ -23,29 +23,39 @@ FLOAT_NUM [1-9]+\.[1-9]+[eE][-+]?[1-9][0-9]*
 				}
 ";"				{
 					create_and_store_token(TOKEN_COMMA_SEP_SIGN,yytext,numOfLine);
-					fprintf(yyout,"Line %d: found token of type: Comma, Lexeme: %s\n",numOfLine,yytext);
+					fprintf(yyout,"Line %d: found token of type: Semicolon, Lexeme: %s\n",numOfLine,yytext);
 					return 1;
 				}
 .*\(.*\)			{
 					create_and_store_token(TOKEN_COMMA_SEP_SIGN,yytext,numOfLine);
-					fprintf(yyout,"Line %d: found token of type: Comma, Lexeme: %s\n",numOfLine,yytext);
+					fprintf(yyout,"Line %d: found token of type: Parentheses , Lexeme: %s\n",numOfLine,yytext);
 					return 1;
 				}
 .*\[.*\]			{
 					create_and_store_token(TOKEN_COMMA_SEP_SIGN,yytext,numOfLine);
-					fprintf(yyout,"Line %d: found token of type: Comma, Lexeme: %s\n",numOfLine,yytext);
+					fprintf(yyout,"Line %d: found token of type: Brackets , Lexeme: %s\n",numOfLine,yytext);
 					return 1;
 				}
-.*\{.*\}			{
+.*\{.*\}		{
 					create_and_store_token(TOKEN_COMMA_SEP_SIGN,yytext,numOfLine);
-					fprintf(yyout,"Line %d: found token of type: Comma, Lexeme: %s\n",numOfLine,yytext);
+					fprintf(yyout,"Line %d: found token of type: Curly braces, Lexeme: %s\n",numOfLine,yytext);
 					return 1;
-				}			
+				}	
+			
 "\n"				{++numOfLine;}					
+
 <<EOF>>    		{
 					create_and_store_token(TOKEN_END_OF_FILE, "", numOfLine);
 					fprintf(yyout,"Line %d: found token of type EOF , lexeme %s\n",numOfLine,yytext);
 					return 0;
+				}
+"/*"  			{
+					BEGIN(comment);
+					
+					<comment>[^*]*               
+					<comment>"*"+[^*/]*                     
+					<comment>"*"+"/"	BEGIN(INITIAL);
+					
 				}
 
 
