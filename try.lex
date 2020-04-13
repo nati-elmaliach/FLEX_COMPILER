@@ -1,5 +1,5 @@
 %option noyywrap
-
+%x C_COMMENT 
 %{
 #include <stdlib.h>
 #include <stdio.h>
@@ -8,9 +8,11 @@
 #define _CRT_SECURE_NO_WARNINGS
 int numOfLine = 0;
 %}
-INT_NUM   0|([1-9][0-9]*)
-FLOAT_NUM [1-9]+\.[1-9]+[eE][-+]?[1-9][0-9]*
+INT_NUM   	0|([1-9][0-9]*)
+FLOAT_NUM 	[1-9]+\.[1-9]+[eE][-+]?[1-9][0-9]*
+ID		[a-z](([a-zA-Z0-9]*_?)[a-zA-Z0-9])* 
 %%
+
 ","				{
 					create_and_store_token(TOKEN_COMMA_SEP_SIGN,yytext,numOfLine);
 					fprintf(yyout,"Line %d: found token of type: Comma, Lexeme: %s\n",numOfLine,yytext);
@@ -98,11 +100,6 @@ FLOAT_NUM [1-9]+\.[1-9]+[eE][-+]?[1-9][0-9]*
 					return 1;
 				}
 
-"<"				{
-					create_and_store_token(TOKEN_COMPARISION_LESS, yytext, numOfLine);
-					fprintf(yyout,"Line %d: found token of type TOKEN_COMPARISION_LESS , lexeme %s\n",numOfLine,yytext);
-					return 1;
-				}
 
 "<="				{
 					create_and_store_token(TOKEN_COMPARISION_LESS_EQUAL, yytext, numOfLine);
@@ -167,6 +164,12 @@ FLOAT_NUM [1-9]+\.[1-9]+[eE][-+]?[1-9][0-9]*
 "return"			{
 					create_and_store_token(TOKEN_KEYWORD_RETURN, yytext, numOfLine);
 					fprintf(yyout,"Line %d: found token of type TOKEN_KEYWORD_RETURN , lexeme %s\n",numOfLine,yytext);
+					return 1;
+				}
+
+{ID}				{
+					create_and_store_token(TOKEN_IDENTIFIR,yytext,numOfLine);
+					fprintf(yyout,"Line %d: found token of type: Identifier, Lexeme: %s\n",numOfLine,yytext);
 					return 1;
 				}
 

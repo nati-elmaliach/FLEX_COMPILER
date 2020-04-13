@@ -1,9 +1,6 @@
-if 8>8 return 8
-float 34.86e-3
-return
-int void main
-() {} []
-(int 8)
-
-
-
+if 8<8 return 1
+(float 34.86e-3)
+aaa = 1;
+bbb = 2;
+_b >=1
+c_ 

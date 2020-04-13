@@ -1,22 +1,23 @@
 Line 0: found token of type TOKEN_KEYWORD_IF , lexeme if
  Line 0: found token of type INT_NUM , lexeme 8
-Line 0: found token of type TOKEN_COMPARISION_GE , lexeme >
+Line 0: found token of type TOKEN_COMPARISION_LESS , lexeme <
 Line 0: found token of type INT_NUM , lexeme 8
  Line 0: found token of type TOKEN_KEYWORD_RETURN , lexeme return
- Line 0: found token of type INT_NUM , lexeme 8
+ Line 0: found token of type INT_NUM , lexeme 1
+Line 1: found token of type: Open Parentheses , Lexeme: (
 Line 1: found token of type TOKEN_KEYWORD_FLOAT , lexeme float
  Line 1: found token of type FLOAT_NUM , lexeme 34.86e-3
-Line 2: found token of type TOKEN_KEYWORD_RETURN , lexeme return
-Line 3: found token of type TOKEN_KEYWORD_INT , lexeme int
- Line 3: found token of type TOKEN_KEYWORD_VOID , lexeme void
- mainLine 4: found token of type: Open Parentheses , Lexeme: (
-Line 4: found token of type: Close Parantheses , Lexeme: )
- Line 4: found token of type:Open Curly braces, Lexeme: {
-Line 4: found token of type:Close Curly braces, Lexeme: }
- Line 4: found token of type: Open brackets , Lexeme: [
-Line 4: found token of type: Close Brackets , Lexeme: ]
-Line 5: found token of type: Open Parentheses , Lexeme: (
-Line 5: found token of type TOKEN_KEYWORD_INT , lexeme int
- Line 5: found token of type INT_NUM , lexeme 8
-Line 5: found token of type: Close Parantheses , Lexeme: )
-Line 9: found token of type EOF , lexeme 
+Line 1: found token of type: Close Parantheses , Lexeme: )
+Line 2: found token of type: Identifier, Lexeme: aaa
+ Line 2: found token of type TOKEN_ASSIGNMENT , lexeme =
+ Line 2: found token of type INT_NUM , lexeme 1
+Line 2: found token of type: Semicolon, Lexeme: ;
+Line 3: found token of type: Identifier, Lexeme: bbb
+ Line 3: found token of type TOKEN_ASSIGNMENT , lexeme =
+ Line 3: found token of type INT_NUM , lexeme 2
+Line 3: found token of type: Semicolon, Lexeme: ;
+_Line 4: found token of type: Identifier, Lexeme: b
+ Line 4: found token of type TOKEN_COMPARISION_GE_EQ , lexeme >=
+Line 4: found token of type INT_NUM , lexeme 1
+Line 5: found token of type: Identifier, Lexeme: c
+_ Line 6: found token of type EOF , lexeme 
