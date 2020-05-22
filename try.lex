@@ -1,7 +1,6 @@
 %option noyywrap
 
 %{
-int counter = 0;
 int numOfLine = 0;
 #include <stdlib.h>
 #include <stdio.h>
@@ -10,7 +9,15 @@ int numOfLine = 0;
 %}
 
 INT_NUM  [0-9]|([1-9][0-9]*)
-FLOAT_NUM [-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?.
+
+FLOAT_NUM "sdfsdf"
+
+OPERATOR_ARITMETIC_ADDITION "+"
+
+OPERATOR_ARITMETIC_MULTIPLICATION "*"
+
+TOKEN_SEPERATION ,|:|;|()
+
 %%
 
 [ \t\n] 			{}
@@ -23,6 +30,17 @@ FLOAT_NUM [-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?.
 				 fprintf(yyout,"Line %d: found token of type FLOAT_NUM , lexeme %s\n", 							numOfLine,yytext);
 				return 1;}
 
+{OPERATOR_ARITMETIC_ADDITION}		{create_and_store_token(TOKEN_OPERATOR_ARITMETIC,yytext,numOfLine);
+				 fprintf(yyout,"Line %d: found token of type TOKEN_OPERATOR_ARITMETIC, lexeme %s\n", 							numOfLine,yytext);
+				return 1;}
+
+{OPERATOR_ARITMETIC_MULTIPLICATION}		{create_and_store_token(TOKEN_OPERATOR_ARITMETIC,yytext,numOfLine);
+				 fprintf(yyout,"Line %d: found token of type TOKEN_OPERATOR_ARITMETIC, lexeme %s\n", 							numOfLine,yytext);
+				return 1;}
+
+"," 	{create_and_store_token(TOKEN_OPERATOR_ARITMETIC,yytext,numOfLine);
+				 fprintf(yyout,"Line %d: found token of type TOKEN_SEPERATION_COMMA, lexeme %s\n", 							numOfLine,yytext);
+				return 1;}
 
 %%
 

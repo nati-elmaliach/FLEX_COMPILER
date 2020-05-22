@@ -1,2 +1,2 @@
 #!/bin/bash
-rm -rf a.out lex.yy.c
+rm -rf a.out lex.yy.c *~
